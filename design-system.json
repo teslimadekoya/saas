@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "source": "Figma",
+    "fileKey": "yY9n45GUOfIhKP3KLcD19t",
+    "nodeId": "169:842",
+    "name": "Saas Landing Page",
+    "description": "Design tokens extracted from Figma variables for consistent future implementation."
+  },
+  "colors": {
+    "brandDark": "#010101",
+    "brandSecondary": "#333333",
+    "neutralSurface": "#f9fafb",
+    "stroke": "#e5e8eb",
+    "strokeMuted": "#a9b3bc",
+    "white": "#ffffff",
+    "whiteSecondary": "#cccccc"
+  },
+  "spacing": {
+    "scale0": 0,
+    "scale1": 4,
+    "scale2": 8,
+    "scale3": 12,
+    "scale4": 16,
+    "scale5": 20,
+    "scale6": 24,
+    "scale7": 28,
+    "scale10": 40,
+    "scale12": 48,
+    "scale14": 64
+  },
+  "typography": {
+    "fontFamilyBase": "Inter, sans-serif",
+    "buttonMediumMedium": {
+      "fontFamily": "Inter, sans-serif",
+      "fontStyle": "Medium",
+      "fontSize": 14,
+      "fontWeight": 500,
+      "lineHeight": 1.38,
+      "letterSpacingPx": 0.2
+    },
+    "sizes": {
+      "display": 40,
+      "h2": 28,
+      "h3": 23,
+      "stat": 33,
+      "body": 16,
+      "small": 13,
+      "button": 14
+    },
+    "lineHeights": {
+      "display": 44,
+      "h2": 34,
+      "h3": 30,
+      "stat": 38,
+      "body": 22,
+      "small": 18,
+      "button": 19
+    },
+    "letterSpacingPx": {
+      "tight": -0.1,
+      "normal": 0.1,
+      "button": 0.2
+    }
+  },
+  "layout": {
+    "containerWidth": 1312,
+    "heroHeight": 900,
+    "featureHeight": 640,
+    "buttonHeight": 40,
+    "tabHeight": 56
+  },
+  "radii": {
+    "none": 0
+  }
+}

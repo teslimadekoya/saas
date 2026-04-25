@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SaaS Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.12.88/build/spline-viewer.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="is-loading">
+    <div id="loading-screen" class="loading-screen" aria-live="polite">
+      <p id="loading-progress" class="loading-progress">20%</p>
+    </div>
+    <main class="page">
+      <section class="hero" data-header-theme="dark">
+        <spline-viewer
+          class="hero-bg"
+          url="https://prod.spline.design/4smsvM-0VBn8dPuk/scene.splinecode"
+        ></spline-viewer>
+        <header class="topbar container">
+          <img
+            class="logo"
+            src="https://www.figma.com/api/mcp/asset/cd1fc7e9-d07f-4965-91c2-8cf27720b855"
+            alt="Logo"
+          />
+          <div class="topbar-actions">
+            <a
+              class="btn btn-ghost"
+              href="https://www.linkedin.com/in/teslim-adekoya/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Sign in</a
+            >
+            <a
+              class="btn btn-header-cta"
+              href="https://www.linkedin.com/in/teslim-adekoya/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Book a demo</a
+            >
+          </div>
+        </header>
+        <div class="hero-content">
+          <h1>Automate up to 80% of your financial workflows.</h1>
+          <p>Reduce manual work and stay in control of every transaction.</p>
+          <a
+            class="btn btn-hero-cta"
+            href="https://www.linkedin.com/in/teslim-adekoya/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Get started</a
+          >
+        </div>
+      </section>
+
+      <section class="container section section-stats reveal reveal-stats" data-header-theme="light">
+        <h2>Real results. Not projections.</h2>
+        <div class="stats-grid">
+          <article class="stat-card">
+            <p class="stat-value">45%</p>
+            <p class="stat-copy">Reduction in manual financial tasks</p>
+          </article>
+          <article class="stat-card">
+            <p class="stat-value">32%</p>
+            <p class="stat-copy">Increase in team productivity</p>
+          </article>
+          <article class="stat-card">
+            <p class="stat-value">3.2x</p>
+            <p class="stat-copy">Faster financial workflow execution</p>
+          </article>
+          <article class="stat-card">
+            <p class="stat-value">18%</p>
+            <p class="stat-copy">Revenue growth within 90 days</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="container section reveal reveal-features" data-header-theme="light">
+        <h2>Financial operations you can trust.</h2>
+        <div class="feature-row reveal reveal-feature-row reveal-left">
+          <article class="feature-copy">
+            <div>
+              <h3>Continuous accounting</h3>
+              <p>
+                Close your books in real time — transactions are categorized,
+                reconciled, and validated as they happen, so your numbers are
+                always accurate, not just at month-end.
+              </p>
+            </div>
+            <a
+              href="https://www.linkedin.com/in/teslim-adekoya/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Learn more →</a
+            >
+          </article>
+          <img
+            src="https://www.figma.com/api/mcp/asset/218f9bcb-5852-4e30-bfc1-b73a82b37881"
+            alt="Continuous accounting chart"
+          />
+        </div>
+
+        <div class="feature-row reveal reveal-feature-row reveal-right">
+          <article class="feature-copy">
+            <div>
+              <h3>Audit-ready reporting</h3>
+              <p>
+                Stand behind every number — every figure is fully traceable back
+                to its source with a clear audit trail.
+              </p>
+            </div>
+            <a
+              href="https://www.linkedin.com/in/teslim-adekoya/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Learn more →</a
+            >
+          </article>
+          <img
+            src="https://www.figma.com/api/mcp/asset/6063b7c4-28f9-457a-a808-30d75712231d"
+            alt="Audit-ready reporting chart"
+          />
+        </div>
+
+        <div class="feature-row reveal reveal-feature-row reveal-left">
+          <article class="feature-copy">
+            <div>
+              <h3>Revenue &amp; receivables</h3>
+              <p>
+                See exactly what you've earned and what you're owed — track
+                revenue, invoices, and outstanding payments with real-time
+                visibility into cash flow.
+              </p>
+            </div>
+            <a
+              href="https://www.linkedin.com/in/teslim-adekoya/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Learn more →</a
+            >
+          </article>
+          <img
+            src="https://www.figma.com/api/mcp/asset/a449d455-2bc7-4f36-b96b-bb5e022e0a8d"
+            alt="Revenue and receivables chart"
+          />
+        </div>
+      </section>
+
+      <section class="container section reveal reveal-break" data-header-theme="light">
+        <div class="scroll-container">
+          <div class="video-wrapper">
+            <div id="story-video-container">
+              <video id="story-video" loop muted playsinline preload="metadata">
+                <source
+                  src="https://cdn.cosmos.so/74eaa492-31ae-4550-b5a1-40917d873af5.mp4"
+                  type="video/mp4"
+                />
+              </video>
+
+              <div class="video-overlay">
+                <div class="caption">THOUGHT VESSEL 01</div>
+                <div class="content">
+                  <h2>Clarity in Silence</h2>
+                  <p>
+                    Design emerges from emptiness. Mental clarity precedes
+                    visual harmony.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container section section-tabs reveal reveal-tabs" data-header-theme="light">
+        <h2>Trusted by teams like yours</h2>
+        <div class="tabs">
+          <div data-tab="software">Software</div>
+          <div data-tab="security">Security</div>
+          <div class="active" data-tab="it-services">IT Services</div>
+          <div data-tab="healthcare">Healthcare</div>
+          <div data-tab="business-services">Business Services</div>
+          <div data-tab="connected-services">Connected Services</div>
+        </div>
+        <div class="testimonial-media">
+          <video
+            id="testimonial-video"
+            playsinline
+            preload="metadata"
+            src="https://cdn.cosmos.so/74eaa492-31ae-4550-b5a1-40917d873af5.mp4"
+          ></video>
+          <button id="play-video-btn" class="btn btn-outline">Play video</button>
+        </div>
+        <div class="testimonial-meta">
+          <p id="testimonial-name" class="name">Mason Margaret</p>
+          <p id="testimonial-role">Head of IT, Fintech Company</p>
+        </div>
+      </section>
+
+      <section class="container cta reveal reveal-cta" data-header-theme="light">
+        <h2>Start automating your workflows today</h2>
+        <p>
+          Connect your tools, remove manual work, and get real-time visibility
+          across your operations without the usual complexity.
+        </p>
+        <a
+          class="btn btn-dark"
+          href="https://www.linkedin.com/in/teslim-adekoya/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Book a demo</a
+        >
+      </section>
+
+      <footer class="container footer reveal reveal-footer" data-header-theme="light">
+        <p>© 2026</p>
+        <p>
+          Made by
+          <a
+            href="https://www.linkedin.com/in/teslim-adekoya/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Teslim Adekoya</a
+          >
+        </p>
+      </footer>
+    </main>
+    <script>
+      (function () {
+        const loadingScreen = document.getElementById("loading-screen");
+        const loadingProgress = document.getElementById("loading-progress");
+        const page = document.querySelector(".page");
+        if (!loadingScreen || !loadingProgress || !page) return;
+
+        const imageAssets = [
+          "https://www.figma.com/api/mcp/asset/cd1fc7e9-d07f-4965-91c2-8cf27720b855",
+          "https://www.figma.com/api/mcp/asset/218f9bcb-5852-4e30-bfc1-b73a82b37881",
+          "https://www.figma.com/api/mcp/asset/6063b7c4-28f9-457a-a808-30d75712231d",
+          "https://www.figma.com/api/mcp/asset/a449d455-2bc7-4f36-b96b-bb5e022e0a8d"
+        ];
+
+        const videoAssets = [
+          "https://cdn.cosmos.so/74eaa492-31ae-4550-b5a1-40917d873af5.mp4"
+        ];
+
+        const waitForWindowLoad = new Promise((resolve) => {
+          if (document.readyState === "complete") resolve();
+          else window.addEventListener("load", resolve, { once: true });
+        });
+
+        const preloadImage = (src) =>
+          new Promise((resolve) => {
+            const img = new Image();
+            img.onload = resolve;
+            img.onerror = resolve;
+            img.src = src;
+          });
+
+        const preloadVideo = (src) =>
+          new Promise((resolve) => {
+            const video = document.createElement("video");
+            const done = () => resolve();
+            video.preload = "metadata";
+            video.onloadeddata = done;
+            video.oncanplay = done;
+            video.onerror = done;
+            video.src = src;
+          });
+
+        const waitForSpline = new Promise((resolve) => {
+          const spline = document.querySelector("spline-viewer.hero-bg");
+          if (!spline) {
+            resolve();
+            return;
+          }
+          let finished = false;
+          const complete = () => {
+            if (finished) return;
+            finished = true;
+            resolve();
+          };
+          spline.addEventListener("load", complete, { once: true });
+          setTimeout(complete, 5000);
+        });
+
+        const tasks = [
+          waitForWindowLoad,
+          waitForSpline,
+          ...imageAssets.map(preloadImage),
+          ...videoAssets.map(preloadVideo)
+        ];
+
+        // No external iframe media to wait for.
+
+        let completed = 0;
+        const base = 20;
+        const updateProgress = () => {
+          const ratio = tasks.length ? completed / tasks.length : 1;
+          const value = Math.min(99, Math.round(base + ratio * (100 - base)));
+          loadingProgress.textContent = `${value}%`;
+        };
+
+        tasks.forEach((task) => {
+          Promise.resolve(task).finally(() => {
+            completed += 1;
+            updateProgress();
+          });
+        });
+
+        Promise.allSettled(tasks).then(() => {
+          loadingProgress.textContent = "100%";
+          setTimeout(() => {
+            document.body.classList.remove("is-loading");
+            loadingScreen.classList.add("is-hidden");
+          }, 180);
+        });
+      })();
+
+      (function () {
+        const revealItems = Array.from(document.querySelectorAll(".reveal"));
+        if (!revealItems.length) return;
+
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+        );
+
+        revealItems.forEach((item, index) => {
+          item.style.setProperty("--reveal-delay", `${Math.min(index * 70, 280)}ms`);
+          revealObserver.observe(item);
+        });
+      })();
+
+      (function () {
+        if (!window.gsap || !window.ScrollTrigger) return;
+        const scrollContainer = document.querySelector(".scroll-container");
+        const videoContainer = document.getElementById("story-video-container");
+        const video = document.getElementById("story-video");
+        const videoOverlay = document.querySelector(".video-overlay");
+        if (!scrollContainer || !videoContainer || !video || !videoOverlay) return;
+
+        gsap.registerPlugin(ScrollTrigger);
+
+        const dimLayer = document.createElement("div");
+        dimLayer.className = "video-dim-layer";
+        videoContainer.appendChild(dimLayer);
+
+        ScrollTrigger.create({
+          trigger: scrollContainer,
+          start: "top bottom",
+          end: "bottom top",
+          onEnter: () => video.play().catch(() => {}),
+          onEnterBack: () => video.play().catch(() => {}),
+          onLeave: () => video.pause(),
+          onLeaveBack: () => video.pause()
+        });
+
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: scrollContainer,
+              start: "top top",
+              end: "bottom bottom",
+              scrub: 0.7
+            }
+          })
+          .to(videoContainer, {
+            scale: 1,
+            borderRadius: "0px",
+            duration: 1
+          })
+          .to(
+            video,
+            {
+              scale: 1.08,
+              duration: 1
+            },
+            0
+          )
+          .to(
+            dimLayer,
+            {
+              backgroundColor: "rgba(1,1,1,0.34)",
+              duration: 1
+            },
+            0
+          )
+          .to(
+            videoOverlay,
+            {
+              clipPath: "inset(0% 0 0 0)",
+              duration: 0.75
+            },
+            0.36
+          )
+          .to(
+            ".video-overlay .content",
+            {
+              y: 0,
+              scale: 1,
+              opacity: 1,
+              duration: 0.75
+            },
+            0.44
+          );
+      })();
+
+      (function () {
+        const header = document.querySelector(".topbar");
+        const themeSections = Array.from(
+          document.querySelectorAll("[data-header-theme]")
+        );
+        if (!header || themeSections.length === 0) return;
+
+        const setHeaderTheme = () => {
+          const probeY = header.offsetHeight / 2 + 2;
+          const activeSection = themeSections.find((section) => {
+            const rect = section.getBoundingClientRect();
+            return rect.top <= probeY && rect.bottom >= probeY;
+          });
+          const theme = activeSection?.dataset.headerTheme || "light";
+          header.classList.toggle("theme-dark", theme === "dark");
+          header.classList.toggle("theme-light", theme === "light");
+        };
+
+        window.addEventListener("scroll", setHeaderTheme, { passive: true });
+        window.addEventListener("resize", setHeaderTheme);
+        setHeaderTheme();
+      })();
+
+      (function () {
+        const tabs = Array.from(document.querySelectorAll(".tabs > div"));
+        const video = document.getElementById("testimonial-video");
+        const playButton = document.getElementById("play-video-btn");
+        const speakerName = document.getElementById("testimonial-name");
+        const speakerRole = document.getElementById("testimonial-role");
+        if (tabs.length === 0) return;
+
+        const tabMedia = {
+          "software": {
+            name: "Aisha Monroe",
+            role: "VP of Engineering, SaaS Platform"
+          },
+          "security": {
+            name: "Daniel Okoro",
+            role: "Director of Security, Cloud Security Firm"
+          },
+          "it-services": {
+            name: "Mason Margaret",
+            role: "Head of IT, Fintech Company"
+          },
+          "healthcare": {
+            name: "Elena Morris",
+            role: "Operations Lead, Healthcare Network"
+          },
+          "business-services": {
+            name: "Jordan Blake",
+            role: "COO, Business Services Group"
+          },
+          "connected-services": {
+            name: "Priya Raman",
+            role: "Product Director, Connected Services"
+          }
+        };
+
+        let currentTab = "it-services";
+        let isPlaying = false;
+
+        const applyTabMedia = (tabKey) => {
+          if (!video) return;
+          const media = tabMedia[tabKey];
+          if (!media) return;
+          currentTab = tabKey;
+          isPlaying = false;
+          video.currentTime = 0;
+          video.pause();
+          if (speakerName) speakerName.textContent = media.name;
+          if (speakerRole) speakerRole.textContent = media.role;
+          if (playButton) playButton.textContent = "Play video";
+        };
+
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", () => {
+            tabs.forEach((item) => item.classList.remove("active"));
+            tab.classList.add("active");
+            applyTabMedia(tab.dataset.tab);
+          });
+        });
+
+        if (playButton && video) {
+          playButton.addEventListener("click", () => {
+            const media = tabMedia[currentTab];
+            if (!media) return;
+            isPlaying = !isPlaying;
+            if (isPlaying) {
+              video.play().catch(() => {});
+              playButton.textContent = "Pause video";
+            } else {
+              video.pause();
+              playButton.textContent = "Play video";
+            }
+          });
+        }
+
+        applyTabMedia("it-services");
+      })();
+    </script>
+  </body>
+</html>
