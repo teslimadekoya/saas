@@ -363,14 +363,38 @@
         dimLayer.className = "video-dim-layer";
         videoContainer.appendChild(dimLayer);
 
-        ScrollTrigger.create({
-          trigger: scrollContainer,
-          start: "top bottom",
-          end: "bottom top",
-          onEnter: () => video.play().catch(() => {}),
-          onEnterBack: () => video.play().catch(() => {}),
-          onLeave: () => video.pause(),
-          onLeaveBack: () => video.pause()
+        video.pause();
+        video.muted = true;
+
+        let scrubDistance = window.innerHeight;
+        let videoDuration = 0;
+        let lastSetTime = 0;
+
+        const setContainerHeight = () => {
+          if (!videoDuration) return;
+          scrubDistance = Math.max(window.innerHeight * 1.1, videoDuration * 580);
+          scrollContainer.style.height = `calc(100vh + ${Math.round(scrubDistance)}px)`;
+          ScrollTrigger.refresh();
+        };
+
+        if (video.readyState >= 1 && Number.isFinite(video.duration) && video.duration > 0) {
+          videoDuration = video.duration;
+          setContainerHeight();
+        } else {
+          video.addEventListener(
+            "loadedmetadata",
+            () => {
+              if (Number.isFinite(video.duration) && video.duration > 0) {
+                videoDuration = video.duration;
+                setContainerHeight();
+              }
+            },
+            { once: true }
+          );
+        }
+
+        window.addEventListener("resize", () => {
+          if (videoDuration) setContainerHeight();
         });
 
         gsap
@@ -379,7 +403,15 @@
               trigger: scrollContainer,
               start: "top top",
               end: "bottom bottom",
-              scrub: 0.7
+              scrub: true,
+              onUpdate: (self) => {
+                if (!videoDuration) return;
+                const targetTime = self.progress * videoDuration;
+                if (Math.abs(targetTime - lastSetTime) > 0.033) {
+                  video.currentTime = targetTime;
+                  lastSetTime = targetTime;
+                }
+              }
             }
           })
           .to(videoContainer, {
