@@ -304,6 +304,7 @@
         // No external iframe media to wait for.
 
         let completed = 0;
+        let didFinishLoading = false;
         const base = 20;
         const updateProgress = () => {
           const ratio = tasks.length ? completed / tasks.length : 1;
@@ -311,20 +312,33 @@
           loadingProgress.textContent = `${value}%`;
         };
 
-        tasks.forEach((task) => {
-          Promise.resolve(task).finally(() => {
-            completed += 1;
-            updateProgress();
-          });
-        });
-
-        Promise.allSettled(tasks).then(() => {
+        const finishLoading = () => {
+          if (didFinishLoading) return;
+          didFinishLoading = true;
           loadingProgress.textContent = "100%";
           setTimeout(() => {
             document.body.classList.remove("is-loading");
             loadingScreen.classList.add("is-hidden");
           }, 180);
-        });
+        };
+
+        const trackedTasks = tasks.map((task) =>
+          Promise.resolve(task).then(
+            () => {
+              completed += 1;
+              updateProgress();
+            },
+            () => {
+              completed += 1;
+              updateProgress();
+            }
+          )
+        );
+
+        Promise.all(trackedTasks).then(finishLoading, finishLoading);
+
+        // iOS Safari compatibility fallback: never leave users on the loader forever.
+        setTimeout(finishLoading, 9000);
       })();
 
       (function () {
